@@ -1,0 +1,60 @@
+<form action method=post name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+">
+    <tr style="text-align: center;">
+        <td style="line-height:2" ;><input type="hidden" name="id" value="1">
+          1</td>
+        <td>
+          <input type=text name=user1 value='Admin' placeholder='Enter Full Name' Required style='height: 30px;width: -webkit-fill-available;
+   background-color: lightblue;'></td>
+        <td><input type=submit value=Save name=submit style=width:auto;padding:1px;height:40px></td>
+    </tr>
+</form>
+<form action method=post name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+">
+    <tr style="text-align: center;">
+        <td style="line-height:2" ;><input type="hidden" name="id" value="2">
+          2</td>
+        <td>
+          <input type=text name=user1 value='USER2' placeholder='Enter Full Name' Required style='height: 30px;width: -webkit-fill-available;
+   background-color: lightblue;'></td>
+        <td><input type=submit value=Save name=submit style=width:auto;padding:1px;height:40px></td>
+    </tr>
+</form>
+<form action method=post name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+">
+    <tr style="text-align: center;">
+        <td style="line-height:2" ;><input type="hidden" name="id" value="3">
+          3</td>
+        <td>
+          <input type=text name=user1 value='USER3' placeholder='Enter Full Name' Required style='height: 30px;width: -webkit-fill-available;
+   background-color: lightblue;'></td>
+        <td><input type=submit value=Save name=submit style=width:auto;padding:1px;height:40px></td>
+    </tr>
+</form>
+<form action method=post name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/username.php</b> on line <b>4</b><br />
+">
+    <tr style="text-align: center;">
+        <td style="line-height:2" ;><input type="hidden" name="id" value="4">
+          4</td>
+        <td>
+          <input type=text name=user1 value='USER4' placeholder='Enter Full Name' Required style='height: 30px;width: -webkit-fill-available;
+   background-color: lightblue;'></td>
+        <td><input type=submit value=Save name=submit style=width:auto;padding:1px;height:40px></td>
+    </tr>
+</form>
+</table>
+</body>
+
+</html>

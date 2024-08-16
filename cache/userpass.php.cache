@@ -1,0 +1,80 @@
+<form name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" method="post" action=""
+    onsubmit="return validatePassword()">
+    <td style="line-height:2;text-align: center;"><input type="hidden" name="id"  value="1">
+      1</td>
+    <td align="left" style="padding:5px">&nbsp;Admin</td>
+    <td><input type="hidden" class="form-control" placeholder="Current Password" name="user$u"
+            value="Admin@123">Admin@123<span id="currentPassword"
+            class="required"></span></td>
+    <td> <input type=password name=user1 value='' class=txtField id=pass1 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td> <input type=password name=user11 value='' class=txtField id=pass2 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Save" class="btnSubmit"></td>
+    </tr>
+</form>
+<form name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" method="post" action=""
+    onsubmit="return validatePassword()">
+    <td style="line-height:2;text-align: center;"><input type="hidden" name="id"  value="2">
+      2</td>
+    <td align="left" style="padding:5px">&nbsp;USER2</td>
+    <td><input type="hidden" class="form-control" placeholder="Current Password" name="user$u"
+            value="User2@12345">User2@12345<span id="currentPassword"
+            class="required"></span></td>
+    <td> <input type=password name=user1 value='' class=txtField id=pass1 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td> <input type=password name=user11 value='' class=txtField id=pass2 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Save" class="btnSubmit"></td>
+    </tr>
+</form>
+<form name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" method="post" action=""
+    onsubmit="return validatePassword()">
+    <td style="line-height:2;text-align: center;"><input type="hidden" name="id"  value="3">
+      3</td>
+    <td align="left" style="padding:5px">&nbsp;USER3</td>
+    <td><input type="hidden" class="form-control" placeholder="Current Password" name="user$u"
+            value="User3@12345">User3@12345<span id="currentPassword"
+            class="required"></span></td>
+    <td> <input type=password name=user1 value='' class=txtField id=pass1 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td> <input type=password name=user11 value='' class=txtField id=pass2 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Save" class="btnSubmit"></td>
+    </tr>
+</form>
+<form name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/userpass.php</b> on line <b>4</b><br />
+" method="post" action=""
+    onsubmit="return validatePassword()">
+    <td style="line-height:2;text-align: center;"><input type="hidden" name="id"  value="4">
+      4</td>
+    <td align="left" style="padding:5px">&nbsp;USER4</td>
+    <td><input type="hidden" class="form-control" placeholder="Current Password" name="user$u"
+            value="User4@12345">User4@12345<span id="currentPassword"
+            class="required"></span></td>
+    <td> <input type=password name=user1 value='' class=txtField id=pass1 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td> <input type=password name=user11 value='' class=txtField id=pass2 style=height: 30px;width: -webkit-fill-available;
+    background-color: lightblue;  required></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Save" class="btnSubmit"></td>
+    </tr>
+</form>
+</table>
+</body>
+
+</html>

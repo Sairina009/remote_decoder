@@ -1,0 +1,49 @@
+<form action method=post name="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/function.php</b> on line <b>2</b><br />
+" id="form<br />
+<b>Notice</b>:  Undefined variable: i in <b>/var/www/html/od/function.php</b> on line <b>2</b><br />
+">
+    <tr style=text-align:center>
+        <td style="line-height:2" ;>1</td>
+        <td align=left style=padding:7px style="line-height: 2" ;>&nbsp;USB HID Devices </td>
+        <td align="left" style="line-height:2" ;> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type=checkbox id=u1 class=save-cb-state name=user1                checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type=checkbox id=u1 class=save-cb-state name=user2                checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="line-height:2" ;><input type="submit" value="Save" name="hid"></td>
+    </tr>
+    <tr style=text-align:center>
+        <td style="line-height:2" ;>2</td>
+        <td align=left style=padding:7px style="line-height: 2" ;>&nbsp;USB Mass Storage </td>
+        <td align="left" style="line-height:2" ;> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type=checkbox id=m1 name=mass1                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type=checkbox id=m1 name=mass2                checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="line-height:2" ;><input type="submit" value="Save" name="mass"></td>
+    </tr>
+ </td>
+    </tr>
+    <tr style=text-align:center>
+        <td style="line-height:2" ;>3</td>
+        <td align=left style=padding:7px style="line-height: 2" ;>&nbsp;USB Card Reader </td>
+        <td align="left" style="line-height:2" ;> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type=checkbox id=c1 name=card1                checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type=checkbox id=c1 name=card2                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="line-height:2" ;><input type="submit" value="Save" name="card"></td>
+    </tr>
+    <tr style=text-align:center>
+        <td style="line-height:2" ;>3</td>
+        <td align=left style=padding:7px style="line-height: 2" ;>&nbsp;Virtual Media </td>
+        <td align="left" style="line-height:2" ;> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type=checkbox id=v1 name=virtual1                checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type=checkbox id=v1 name=virtual2                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="line-height:2" ;><input type="submit" value="Save" name="virtual"></td>
+    </tr>
+  
+</form>
+</table>
+</body>
+
+</html>
