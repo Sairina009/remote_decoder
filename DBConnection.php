@@ -91,11 +91,11 @@ public function logindata($username, $password) {
             echo $error = "User is disabled";
             return $error;
         } else {
-            echo $error = "Invalid Username and Password";
+            $error = "Invalid Username and Password";
             return $error;
         } 
     } else {
-        echo $error = "Invalid Username and Password";
+        $error = "Invalid Username and Password";
         return $error;
     }
 }
@@ -290,7 +290,7 @@ private function addToWaitingList($user) {
     }
     public function user()
     {
-        $per_page_record = 1;          
+        $per_page_record = 4;          
         if (isset($_GET["page"])) {    
             $page  = $_GET["page"];    
         }    
