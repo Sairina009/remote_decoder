@@ -1,0 +1,63 @@
+Remote Decoder Application Installation on hardware (CN9130) Guide
+
+This Application is currently working and tested for Linux system only. 
+
+We have set Encoder1 ip_address as 192.168.1.192
+1.1   Accessing the Repository :
+
+    • Clone Repository: Clone the source code repository using the following command
+    
+	      $ git clone https://gitlab.com/acclivis.oct.kvm/kvm.git     [Username: acclivis.oct.kvm@gmail.com | Password: kvm_access]
+	      
+    • Create Directory: Create a new directory on your local system
+    
+              mkdir new_directory (mkdir remote_decoder)
+              cd remote_decoder
+              pwd    (DIR_PATH)             
+		
+    • Checkout Branch: Switch to the appropriate branch
+              cd kvm  	
+              git checkout remotes/origin/package_installer_remote_decoder
+              
+1.2 Installation Steps :
+
+    • Copy Installer: Copy the Linux package installer to the previously created directory
+              cd DIR_PATH   
+              cp -r LINUX_PACKAGE_INSTALLER DIR_PATH  (take directory path from where you create your own directory)
+           
+          
+    • Install Components: Execute the installer script to install necessary components
+         
+          sudo ./installer.sh acclivis.oct.kvm kvm_access
+          sudo chmod -R 777 DIR_PATH/rtsp-stream/*
+          sudo chmod -R 777 /etc/nginx/*
+          sudo chmod -R 777 /var/www/html/rtsp-stream/node_modules/node-rtsp-stream/lib/*
+
+1.3 Configuration :
+    • Navigate to Configuration: Move to the configuration directory
+          cd Config
+    • Edit Configuration: Modify the ‘default.json’ file to configure settings
+          vim default.json
+
+Example Configuration:
+{
+    "server": {
+        "uri":"rtsp://192.168.1.192:9099/stream",                    // put encoder ip address
+        "socket_port_mouse": 1792,
+        "socket_port_keyboard": 1791,
+        "socket_port_mass": 1793,
+        "virtual_media": "/home/root/mass_storage/",
+        "encoderIP":"192.168.1.192",                                // put current encoder ip address
+        "decoderIP":"192.168.1.121",                                // put current decoder ip address
+        "remoteMassPath":"./downloads/",
+        "userName":"kvmOct"
+    }
+}
+
+1.4 Running the Application :
+    • Navigate to run the KVM_DECODER application
+      cd remote_decoder/LINUX_PACKAGE_INSTALLER/ 
+    • Execute Application: Run the application using the following command
+      sudo ./run.sh
+
+Now the stream has started, to view it on OSD page follow the steps given in Readme file of OSD.
