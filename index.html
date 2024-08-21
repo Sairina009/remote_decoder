@@ -78,7 +78,7 @@ document.getElementById("closeBtn").onclick = function() {
             var params = new URLSearchParams(window.location.search);
             var id = params.get('id');
             var decoderid = params.get('decoderid');
-            if (decoderid !== null && id !== null) {
+            if (decoderid == null) {
                 $.ajax({
                     type: "POST",
                     url: "remove_decoder.php",
