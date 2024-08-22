@@ -66,8 +66,7 @@ public function logindata($username, $password) {
                 // Update decoder table
                 $decoder_name = ''; // Set to default or fetch from user data
                 $user_authority = ''; // Set to default or fetch from user data
-                $this->updateDecoderTable($decoder_name, $username, $user_authority);
-
+               
                 if ($result1->authority == 'Admin') {
                     if ($result1->view == 'OFF') {
                         header("location: user.php");
@@ -83,7 +82,6 @@ public function logindata($username, $password) {
                 }
             } else {
                 // Add user to waiting list
-                $this->addToWaitingList($result1);
                 echo $error = "Maximum number of active sessions reached. You have been added to the waiting list.";
                 return $error;
             }
@@ -100,75 +98,6 @@ public function logindata($username, $password) {
     }
 }
 
-private function updateDecoderTable($username, $user_authority) {
-    // Get the current number of rows in the decoder table
-    $decoder_count_query = "SELECT COUNT(*) AS decoder_count FROM decoder";
-    $decoder_count_result = mysqli_query($this->conn, $decoder_count_query);
-    $decoder_count_row = mysqli_fetch_assoc($decoder_count_result);
-    $decoder_count = $decoder_count_row['decoder_count'] + 1;
-
-    // Limit the insertion to only 4 rows
-    if ($decoder_count <= 4) {
-        // Insert data into the decoder table with blank values for other columns
-        $login_time = date("Y-m-d H:i:s");
-        $insert_query = "INSERT INTO decoder (decoder_count, ip_address, encoder_id, decoder_name, decoder_type, user_id, mac_address, banner, thumbnailview, lastupdatedby, user_authority) 
-                         VALUES ('$decoder_count', '', '1', '$username', '', '{$_SESSION['id']}', '', '', '', '$login_time', '')";
-        $result = mysqli_query($this->conn, $insert_query);
-        if (!$result) {
-            die(mysqli_error($this->conn)); // Output any error that occurs
-        }
-    } else {
-        echo "Maximum number of decoders reached.";
-    }
-}
-
-
-public function logUserIn($user_id) {
-    // Get the next available decoder_id
-    $next_decoder_query = "SELECT MAX(decoder_id) AS max_decoder_id FROM decoder_status";
-    $next_decoder_result = mysqli_query($this->conn, $next_decoder_query);
-    $next_decoder_row = mysqli_fetch_assoc($next_decoder_result);
-    $next_decoder_id = $next_decoder_row['max_decoder_id'] + 1;
-
-    // Insert the login record with the next decoder_id
-    $login_time = date("Y-m-d H:i:s");
-    $query = "INSERT INTO decoder_status (decoder_id, user_id, login_time) VALUES ('$next_decoder_id', '$user_id', '$login_time')";
-    mysqli_query($this->conn, $query);
-
-    // Update the decoder table with the user's ID and assigned decoder_id
-    $update_query = "UPDATE decoder SET user_id = '$user_id', decoder_id = '$next_decoder_id' WHERE decoder_count = '$next_decoder_id'";
-    mysqli_query($this->conn, $update_query);
-
-    // Log the login action
-    $log['action_made'] = "Logged in.";
-    $log['event'] = "Access Login";
-    $this->save_log($log);
-}
-
-private function save_log($data = array()) {
-    if (count($data) > 0) {
-        extract($data);
-        if(isset($_SESSION['id'])) {
-            $log['user_id'] = $_SESSION['id'];
-        } else {
-            $log['user_id'] = ''; 
-        }
-        $log['action_made'] = $action_made;
-        $log['event'] = $event;
-        $sql = "INSERT INTO `logs` (`user_id`,`action_made`,`event`) VALUES ('{$log['user_id']}','{$log['action_made']}','{$log['event']}')";
-        $save = $this->conn->query($sql);
-        if (!$save) {
-            die($sql . " <br> ERROR:" . $this->conn->error);
-        }
-    }
-    return true;
-}
-
-private function addToWaitingList($user) {
-    // Add user to waiting list
-    $login_time = date("Y-m-d H:i:s");
-    mysqli_query($this->conn, "INSERT INTO waiting_list (user_id, login_time) VALUES ('$user->id', '$login_time')"); // Fix accessing object properties
-}
     public function audit()
     {
         $per_page_record = 15;        
